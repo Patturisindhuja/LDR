@@ -1,0 +1,14 @@
+int ldrpin=A0;
+int ledpin=3;
+int ldrvalue=0;
+int ledbrightness=0;
+void setup(){
+    pinMode(ledpin,OUTPUT);
+    pinMode(ldrpin,INPUT);
+}
+void loop(){
+ int ldrvalue=analogRead(A0);
+ int ledightness=map(ldrvalue,0,1023,255,0);
+analogWrite(ledpin,ledbrightness);
+    delay(500);
+}
